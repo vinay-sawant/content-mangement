@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -50,22 +50,7 @@ export default function MyDocuments() {
     loadDocuments();
   }, []);
 
-  useEffect(() => {
-    filterDocuments();
-  }, [documents, searchQuery, categoryFilter]);
-
-  const loadDocuments = async () => {
-    try {
-      const response = await documentsAPI.getMy();
-      setDocuments(response.data);
-    } catch (error) {
-      toast.error('Failed to load documents');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const filterDocuments = () => {
+  const filterDocuments = useCallback(() => {
     let filtered = documents;
 
     if (searchQuery) {
@@ -81,6 +66,21 @@ export default function MyDocuments() {
     }
 
     setFilteredDocs(filtered);
+  }, [documents, searchQuery, categoryFilter]);
+
+  useEffect(() => {
+    filterDocuments();
+  }, [filterDocuments]);
+
+  const loadDocuments = async () => {
+    try {
+      const response = await documentsAPI.getMy();
+      setDocuments(response.data);
+    } catch (error) {
+      toast.error('Failed to load documents');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleUpload = async (e) => {

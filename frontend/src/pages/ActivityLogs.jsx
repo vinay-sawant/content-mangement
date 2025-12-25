@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import {
@@ -35,22 +35,7 @@ export default function ActivityLogs() {
     loadLogs();
   }, []);
 
-  useEffect(() => {
-    filterLogs();
-  }, [logs, searchQuery, actionFilter]);
-
-  const loadLogs = async () => {
-    try {
-      const response = await activityAPI.getLogs();
-      setLogs(response.data);
-    } catch (error) {
-      toast.error('Failed to load activity logs');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const filterLogs = () => {
+  const filterLogs = useCallback(() => {
     let filtered = logs;
 
     if (searchQuery) {
@@ -66,6 +51,21 @@ export default function ActivityLogs() {
     }
 
     setFilteredLogs(filtered);
+  }, [logs, searchQuery, actionFilter]);
+
+  useEffect(() => {
+    filterLogs();
+  }, [filterLogs]);
+
+  const loadLogs = async () => {
+    try {
+      const response = await activityAPI.getLogs();
+      setLogs(response.data);
+    } catch (error) {
+      toast.error('Failed to load activity logs');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const getActionIcon = (action) => {

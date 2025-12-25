@@ -56,14 +56,14 @@ export default function LandingPage({ setIsAuthenticated }) {
           <div className="space-y-8 animate-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
               <GraduationCap className="w-4 h-4" />
-              Academic Collaboration Platform
+              Institute Collaboration Platform
             </div>
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight leading-tight">
-              Secure Document Management for Educators
+              Content Management System for Institutes
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              A centralized platform for university teachers to collaborate, share academic resources,
-              and track document access with precision and accountability.
+              A powerful platform for educational institutions to manage, share, and track academic content
+              with precision, security, and full accountability.
             </p>
 
             {/* Features */}
@@ -75,7 +75,7 @@ export default function LandingPage({ setIsAuthenticated }) {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Centralized Repository</h3>
                   <p className="text-sm text-muted-foreground">
-                    Store and organize all academic documents in one secure place
+                    Store and organize all academic content in one secure place
                   </p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function LandingPage({ setIsAuthenticated }) {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Permission Control</h3>
                   <p className="text-sm text-muted-foreground">
-                    Grant time-bound, role-based access to your documents
+                    Grant time-bound, role-based access to content
                   </p>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function LandingPage({ setIsAuthenticated }) {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Activity Tracking</h3>
                   <p className="text-sm text-muted-foreground">
-                    Monitor document access with detailed logs and analytics
+                    Monitor content access with detailed logs and analytics
                   </p>
                 </div>
               </div>
@@ -108,7 +108,7 @@ export default function LandingPage({ setIsAuthenticated }) {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Weekly Summaries</h3>
                   <p className="text-sm text-muted-foreground">
-                    Get insights on collaboration patterns and document usage
+                    Get insights on collaboration patterns and content usage
                   </p>
                 </div>
               </div>
@@ -138,7 +138,7 @@ export default function LandingPage({ setIsAuthenticated }) {
                         <Input
                           id="login-email"
                           type="email"
-                          placeholder="professor@university.edu"
+                          placeholder="user@institute.edu"
                           value={loginData.email}
                           onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
                           required
@@ -187,7 +187,7 @@ export default function LandingPage({ setIsAuthenticated }) {
                         <Input
                           id="register-email"
                           type="email"
-                          placeholder="professor@university.edu"
+                          placeholder="user@institute.edu"
                           value={registerData.email}
                           onChange={(e) => setRegisterData({ ...registerData, email: e.target.value })}
                           required
@@ -239,7 +239,7 @@ export default function LandingPage({ setIsAuthenticated }) {
       {/* Footer */}
       <footer className="border-t border-border py-8 mt-20">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>University Manager - Secure Academic Collaboration</p>
+          <p>Content Management System for Institutes - Secure Academic Collaboration</p>
         </div>
       </footer>
     </div>

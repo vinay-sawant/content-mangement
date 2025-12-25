@@ -39,8 +39,8 @@ export default function Layout({ children, setIsAuthenticated }) {
       <aside className="hidden lg:fixed lg:inset-y-0 lg:flex lg:w-64 lg:flex-col border-r border-border bg-card">
         <div className="flex flex-col flex-grow overflow-y-auto">
           <div className="flex items-center flex-shrink-0 px-6 py-8 border-b border-border">
-            <h1 className="font-serif text-2xl font-bold text-primary" data-testid="app-title">
-              University Manager
+            <h1 className="font-serif text-xl font-bold text-primary leading-tight" data-testid="app-title">
+              Content Management System
             </h1>
           </div>
           <nav className="flex-1 px-4 py-6 space-y-1">
@@ -80,8 +80,8 @@ export default function Layout({ children, setIsAuthenticated }) {
 
       {/* Mobile header */}
       <div className="lg:hidden sticky top-0 z-40 flex items-center justify-between px-4 py-4 bg-card border-b border-border">
-        <h1 className="font-serif text-xl font-bold text-primary" data-testid="app-title-mobile">
-          University Manager
+        <h1 className="font-serif text-lg font-bold text-primary leading-tight" data-testid="app-title-mobile">
+          CMS for Institutes
         </h1>
         <Button
           variant="ghost"

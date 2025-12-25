@@ -1,0 +1,134 @@
+{
+  "identity": {
+    "name": "University Manager",
+    "persona": "E1 - The Anti-AI Designer",
+    "tone": "Modern Academic - Prestigious yet Efficient",
+    "vibe": "Digital Library meets Control Room"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Manrope",
+      "mono": "JetBrains Mono"
+    },
+    "weights": {
+      "heading": "font-bold",
+      "body": "font-normal",
+      "accent": "font-medium"
+    },
+    "usage": {
+      "h1": "font-serif text-4xl md:text-5xl tracking-tight font-bold text-primary",
+      "h2": "font-serif text-3xl tracking-tight font-semibold text-primary",
+      "h3": "font-sans text-xl font-semibold text-foreground",
+      "body": "font-sans text-base leading-relaxed text-muted-foreground",
+      "caption": "font-sans text-xs uppercase tracking-widest text-muted-foreground/70"
+    }
+  },
+  "colors": {
+    "palette": {
+      "light": {
+        "background": "#F9FAFB",
+        "foreground": "#0F172A",
+        "card": "#FFFFFF",
+        "primary": "#0F172A",
+        "secondary": "#F1F5F9",
+        "accent": "#D97706",
+        "border": "#E2E8F0"
+      },
+      "dark": {
+        "background": "#020617",
+        "foreground": "#F8FAFC",
+        "card": "#0F172A",
+        "primary": "#F8FAFC",
+        "secondary": "#1E293B",
+        "accent": "#F59E0B",
+        "border": "#1E293B"
+      }
+    },
+    "semantic": {
+      "success": "text-emerald-600 bg-emerald-50 dark:text-emerald-400 dark:bg-emerald-950/30",
+      "warning": "text-amber-600 bg-amber-50 dark:text-amber-400 dark:bg-amber-950/30",
+      "error": "text-rose-600 bg-rose-50 dark:text-rose-400 dark:bg-rose-950/30",
+      "info": "text-blue-600 bg-blue-50 dark:text-blue-400 dark:bg-blue-950/30"
+    }
+  },
+  "layout": {
+    "grid_system": {
+      "dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6 p-6",
+      "landing": "grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 px-6 py-12"
+    },
+    "spacing": {
+      "container_padding": "p-6 md:p-8 lg:p-12",
+      "section_gap": "gap-8 md:gap-12",
+      "item_gap": "gap-4"
+    },
+    "containers": {
+      "card": "bg-card text-card-foreground rounded-xl border border-border shadow-sm hover:shadow-md transition-all duration-200",
+      "panel": "bg-background/50 backdrop-blur-xl border-l border-border h-full"
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6 rounded-md font-medium transition-transform active:scale-95",
+      "secondary": "bg-secondary text-secondary-foreground hover:bg-secondary/80 h-10 px-6 rounded-md font-medium",
+      "ghost": "hover:bg-accent hover:text-accent-foreground h-10 px-4 rounded-md"
+    },
+    "inputs": {
+      "default": "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    },
+    "cards": {
+      "document": "group relative overflow-hidden rounded-xl border border-border bg-card p-6 hover:border-accent/50 transition-colors",
+      "stat": "rounded-xl border border-border bg-card p-6 flex flex-col justify-between"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "bg-white/70 dark:bg-black/60 backdrop-blur-xl border border-white/20 shadow-sm",
+    "gradients": {
+      "hero": "bg-gradient-to-br from-primary/5 via-transparent to-accent/5",
+      "text": "bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70"
+    },
+    "shadows": {
+      "soft": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+      "glow": "shadow-[0_0_15px_rgba(217,119,6,0.3)]"
+    }
+  },
+  "images": {
+    "landing_hero": {
+      "url": "https://images.unsplash.com/photo-1685456891912-c09f9cd252eb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwY2FtcHVzJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc2NjY3NTYyMXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Modern university building with clock tower",
+      "usage": "Hero section background or main visual"
+    },
+    "collaboration": {
+      "url": "https://images.unsplash.com/photo-1758270704247-632bd4f7301e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHw0fHxkaXZlcnNlJTIwZ3JvdXAlMjBvZiUyMHByb2Zlc3NvcnMlMjBtZWV0aW5nfGVufDB8fHx8MTc2NjY3NTYyM3ww&ixlib=rb-4.1.0&q=85",
+      "alt": "Professor teaching students",
+      "usage": "Features section or 'About' area"
+    },
+    "abstract": {
+      "url": "https://images.unsplash.com/photo-1600903308878-bf5e554ab841?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzF8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB1bml2ZXJzaXR5JTIwY2FtcHVzJTIwYXJjaGl0ZWN0dXJlfGVufDB8fHx8MTc2NjY3NTYyMXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Abstract glass building architecture",
+      "usage": "Background texture or login page side image"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use .jsx extension for all React components.",
+    "Implement the 'Modern Academic' theme: Clean, high-contrast, with serif headings.",
+    "Use 'Playfair Display' for all H1/H2 headings to give it that university prestige.",
+    "Use 'Manrope' for all body text and UI elements for maximum legibility.",
+    "For the Dashboard, use a 'Control Room' grid layout. Dense but breathable.",
+    "Implement a 'Tracing Beam' effect on document cards using framer-motion if possible, or simple border color transitions.",
+    "Use Shadcn components for all interactive elements (Dialogs, Dropdowns, Forms).",
+    "Customize Shadcn components to match the 'Modern Academic' theme (e.g., sharper corners on cards, serif fonts in headers).",
+    "Ensure all interactive elements have data-testid attributes.",
+    "Do not use generic gradients. Use subtle noise textures or solid colors.",
+    "For the 'My Documents' view, provide both a Grid view (Cards) and a List view (Table).",
+    "The 'Activity Logs' should be a dense table with clear status indicators (colored badges)."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI Slop' - no generic centered layouts.",
+    "Use 2-3x more spacing than typical.",
+    "Every interaction needs a micro-animation.",
+    "Dark colors look good when used independently without gradients.",
+    "Never use AI assistant emojis.",
+    "Use Sonner for toasts."
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "total_tests": 15,
+  "passed_tests": 15,
+  "success_rate": 100.0,
+  "test_details": [
+    {
+      "test": "User Registration",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "User Login",
+      "success": true,
+      "details": "Token received"
+    },
+    {
+      "test": "Get Current User",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Document Upload",
+      "success": true,
+      "details": "Document ID: cea87d42-ad30-4a22-8e10-47562efa80f1"
+    },
+    {
+      "test": "Get My Documents",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Document Download",
+      "success": true,
+      "details": "Status: 200, Content-Length: 55"
+    },
+    {
+      "test": "Register Second User",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Second User Login",
+      "success": true,
+      "details": "Token received"
+    },
+    {
+      "test": "Request Access",
+      "success": true,
+      "details": "Request ID: ecaa36d5-0116-4275-a22c-c1eb4bfa2f52"
+    },
+    {
+      "test": "Grant Access",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Incoming Permissions",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Outgoing Permissions",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Activity Logs",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Get Weekly Summary",
+      "success": true,
+      "details": "Status: 200"
+    },
+    {
+      "test": "Delete Document",
+      "success": true,
+      "details": "Status: 200"
+    }
+  ]
+}

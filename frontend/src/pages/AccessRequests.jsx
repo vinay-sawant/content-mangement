@@ -74,15 +74,9 @@ export default function AccessRequests() {
 
   const loadAllDocuments = async () => {
     try {
-      const [myDocs, sharedDocs] = await Promise.all([
-        documentsAPI.getMy(),
-        documentsAPI.getShared(),
-      ]);
-      const allDocs = [...myDocs.data, ...sharedDocs.data];
-      const uniqueDocs = allDocs.filter(
-        (doc, index, self) => index === self.findIndex((d) => d.id === doc.id)
-      );
-      setAllDocuments(uniqueDocs);
+      // Get documents from other users that are available to request
+      const availableDocs = await documentsAPI.getAvailable();
+      setAllDocuments(availableDocs.data);
     } catch (error) {
       console.error('Failed to load documents');
     }

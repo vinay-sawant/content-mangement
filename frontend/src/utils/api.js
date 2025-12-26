@@ -43,6 +43,7 @@ export const documentsAPI = {
   }),
   getMy: () => api.get('/documents/my'),
   getShared: () => api.get('/documents/shared'),
+  getAvailable: () => api.get('/documents/available'),
   getById: (id) => api.get(`/documents/${id}`),
   download: (id) => api.get(`/documents/${id}/download`, { responseType: 'blob' }),
   delete: (id) => api.delete(`/documents/${id}`),

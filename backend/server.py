@@ -397,6 +397,20 @@ async def download_document(document_id: str, current_user: dict = Depends(get_c
         headers={"Content-Disposition": f"attachment; filename={doc['filename']}"}
     )
 
+@api_router.get("/documents/available", response_model=List[DocumentMetadata])
+async def get_available_documents(current_user: dict = Depends(get_current_user)):
+    """Get documents from other users that current user can request access to"""
+    # Get documents NOT owned by current user
+    docs = await db.documents.find(
+        {"owner_id": {"$ne": current_user["id"]}},
+        {"_id": 0}
+    ).to_list(1000)
+    
+    for doc in docs:
+        doc["uploaded_at"] = datetime.fromisoformat(doc["uploaded_at"])
+    
+    return docs
+
 @api_router.delete("/documents/{document_id}")
 async def delete_document(document_id: str, current_user: dict = Depends(get_current_user)):
     doc = await db.documents.find_one({"id": document_id}, {"_id": 0})
